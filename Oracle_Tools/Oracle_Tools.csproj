@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F08B1E2-F0E8-4E77-9B8B-CF4E4B787C7B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Oracle_Tools</RootNamespace>
+    <AssemblyName>Oracle_Tools</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Oracle_Tools.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=2.111.6.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\oracle\product\11.2.0\client_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpSvn">
+      <HintPath>..\..\SVN_Tools\SVN_Tools\bin\Release\SharpSvn.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinSCPnet">
+      <HintPath>C:\Program Files (x86)\WinSCP\WinSCPnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="csAgendaDeScripts.cs" />
+    <Compile Include="csBackupObjetoDeBanco.cs" />
+    <Compile Include="csDadosConexao.cs" />
+    <Compile Include="csJob.cs" />
+    <Compile Include="csListViewColumnSorter.cs" />
+    <Compile Include="csObjetoDeBanco.cs" />
+    <Compile Include="csOracle.cs" />
+    <Compile Include="csScriptAgendado.cs" />
+    <Compile Include="csUsuarioBanco.cs" />
+    <Compile Include="csUtil.cs" />
+    <Compile Include="frmBackupsControleConcorrencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackupsControleConcorrencia.Designer.cs">
+      <DependentUpon>frmBackupsControleConcorrencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmControleConcorrencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmControleConcorrencia.Designer.cs">
+      <DependentUpon>frmControleConcorrencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDBLINKs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDBLINKs.designer.cs">
+      <DependentUpon>frmDBLINKs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDetalhesRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalhesRole.designer.cs">
+      <DependentUpon>frmDetalhesRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDetalhesUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalhesUser.Designer.cs">
+      <DependentUpon>frmDetalhesUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExtractDDL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExtractDDL.designer.cs">
+      <DependentUpon>frmExtractDDL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExtractUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExtractUser.designer.cs">
+      <DependentUpon>frmExtractUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoBanco.Designer.cs">
+      <DependentUpon>frmInfoBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJobs.Designer.cs">
+      <DependentUpon>frmJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginORACLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginORACLE.designer.cs">
+      <DependentUpon>frmLoginORACLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginAD.designer.cs">
+      <DependentUpon>frmLoginAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginFTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginFTP.Designer.cs">
+      <DependentUpon>frmLoginFTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginSVN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginSVN.designer.cs">
+      <DependentUpon>frmLoginSVN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcuraLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcuraLock.Designer.cs">
+      <DependentUpon>frmProcuraLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQueryAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueryAlert.designer.cs">
+      <DependentUpon>frmQueryAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScriptAgendado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScriptAgendado.Designer.cs">
+      <DependentUpon>frmScriptAgendado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSessoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSessoes.Designer.cs">
+      <DependentUpon>frmSessoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmToolList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToolList.Designer.cs">
+      <DependentUpon>frmToolList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBackupsControleConcorrencia.resx">
+      <DependentUpon>frmBackupsControleConcorrencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmControleConcorrencia.resx">
+      <DependentUpon>frmControleConcorrencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDBLINKs.resx">
+      <DependentUpon>frmDBLINKs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetalhesRole.resx">
+      <DependentUpon>frmDetalhesRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetalhesUser.resx">
+      <DependentUpon>frmDetalhesUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExtractDDL.resx">
+      <DependentUpon>frmExtractDDL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExtractUser.resx">
+      <DependentUpon>frmExtractUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoBanco.resx">
+      <DependentUpon>frmInfoBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJobs.resx">
+      <DependentUpon>frmJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginORACLE.resx">
+      <DependentUpon>frmLoginORACLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginAD.resx">
+      <DependentUpon>frmLoginAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginFTP.resx">
+      <DependentUpon>frmLoginFTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginSVN.resx">
+      <DependentUpon>frmLoginSVN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcuraLock.resx">
+      <DependentUpon>frmProcuraLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQueryAlert.resx">
+      <DependentUpon>frmQueryAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScriptAgendado.resx">
+      <DependentUpon>frmScriptAgendado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSessoes.resx">
+      <DependentUpon>frmSessoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToolList.resx">
+      <DependentUpon>frmToolList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Extract_User.png" />
+    <None Include="Resources\Lupa_User.png" />
+    <None Include="Resources\Locked.png" />
+    <None Include="Resources\Alerta.png" />
+    <None Include="Resources\User.png" />
+    <None Include="Resources\Extract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Oracle_Tools.ico" />
+    <None Include="Resources\Job_de_banco.png" />
+    <None Include="Resources\Sessoes.png" />
+    <None Include="Resources\CalendarioMedio.png" />
+    <None Include="Resources\Role.png" />
+    <None Include="Resources\Lupa_Muito_Pequena.png" />
+    <None Include="Resources\Lupa_Pequena.png" />
+    <None Include="Resources\Lupa_Media.png" />
+    <None Include="Resources\Lupa.png" />
+    <None Include="Resources\Users.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
